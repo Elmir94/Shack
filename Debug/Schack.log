@@ -1,0 +1,11 @@
+﻿  Board.cpp
+c:\users\reide\source\repos\schack\schack\board.cpp(190): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\reide\source\repos\schack\schack\board.cpp(195): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\reide\source\repos\schack\schack\board.cpp(226): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\reide\source\repos\schack\schack\board.cpp(261): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\reide\source\repos\schack\schack\board.cpp(282): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\reide\source\repos\schack\schack\board.cpp(286): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\reide\source\repos\schack\schack\board.cpp(287): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Main.cpp
+  Schack.vcxproj -> C:\Users\Reide\source\repos\Schack\Debug\Schack.exe
+  Schack.vcxproj -> C:\Users\Reide\source\repos\Schack\Debug\Schack.pdb (Partial PDB)

@@ -1,0 +1,11 @@
+﻿  stdafx.cpp
+  Board.cpp
+  Game.cpp
+  Pawn.cpp
+  Piece.cpp
+  Main.cpp
+  Generating code
+  All 85 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Schack.vcxproj -> C:\Users\Reide\source\repos\Schack\Release\Schack.exe
+  Schack.vcxproj -> C:\Users\Reide\source\repos\Schack\Release\Schack.pdb (Full PDB)
