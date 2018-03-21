@@ -1,0 +1,2 @@
+To move the piece: 1.select the piece with the left mouse button
+		   2.select the destination with the right mouse button
