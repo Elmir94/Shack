@@ -39,10 +39,12 @@ void Piece::setType(int type)
 }
 bool Piece::getIsMoved()
 {
-	return isMoved;
+	return this->isMoved;
 }
 
 void Piece::setMoved()
 {
-	isMoved = true;
+	this->isMoved = true;
 }
+
+

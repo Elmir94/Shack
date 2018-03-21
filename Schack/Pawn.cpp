@@ -45,6 +45,11 @@ void Pawn::setDefaultPosition(int x, int y)
 	getSprite().setPosition(sf::Vector2f(x + (5 * x), y + (5 * y)));
 }
 
+Pawn * Pawn::clone() const
+{
+	return nullptr;
+}
+
 
 
 

@@ -21,16 +21,25 @@ bool Rules::isMoveOk(float oldXPos, float oldYPos, float newXPos, float newYPos,
 
 	if (dynamic_cast<Pawn*>(ptr[pos]))
 	{
-		if (dy >= -128 && dy <= 128 && ptr[pos]->getIsMoved() == false)
+		std::cout << "OldxPos"<<oldXPos << std::endl;
+		std::cout << "OldyPos"<<oldYPos << std::endl;
+		std::cout << "NewXPos" << newXPos << std::endl;
+		std::wcout << "NewYpos" << newYPos << std::endl;
+		if (dy == -128 || dy == 128) 
 		{
-			if (dx != 0)
+			if (ptr[pos]->getIsMoved() == false)
 			{
-				moveOk = false;
-			}
-			else if(dx == 0)
-			{
-				moveOk = true;
-				ptr[pos]->setMoved();
+				std::cout << "Ismoved : " << ptr[pos]->getIsMoved() << std::endl;
+				if (dx != 0)
+				{
+					moveOk = false;
+				}
+				else if (dx == 0)
+				{
+					moveOk = true;
+					ptr[pos]->setMoved();
+				}
+				std::cout << "LongMoveAcceptedOrNot" << moveOk << std::endl;
 			}
 			
 		}
@@ -39,8 +48,23 @@ bool Rules::isMoveOk(float oldXPos, float oldYPos, float newXPos, float newYPos,
 
 			if (dx >= -64 && dx <= 64)
 			{
-				if (dx == 0 || doesEnemyExistPawn(ptr, newXPos, newYPos, pos) == true)
+				if (dx != 0 && doesEnemyExistPawn(ptr, newXPos, newYPos, pos) == true)
+				{
 					moveOk = true;
+				}
+				if (dx == 0 && doesEnemyExistPawn(ptr, newXPos, newYPos, pos) == true)
+				{
+					moveOk = false;
+				}
+				if (dx != 0 && doesEnemyExistPawn(ptr, newXPos, newYPos, pos) == false)
+				{
+					moveOk = false;
+				}
+				if (dx == 0 && doesEnemyExistPawn(ptr, newXPos, newYPos, pos) == false)
+				{
+					moveOk = true;
+				}
+					
 			}
 			if (ptr[pos]->getType() == -1 && dy < 0)
 			{
@@ -50,10 +74,7 @@ bool Rules::isMoveOk(float oldXPos, float oldYPos, float newXPos, float newYPos,
 			{
 				moveOk = false;
 			}
-			if (dx == 0 && dy != 0 && doesEnemyExistPawn(ptr, newXPos, newYPos, pos) == true)
-			{
-				moveOk = false;
-			}
+			
 
 		}
 		
@@ -82,27 +103,32 @@ bool Rules::isMoveOk(float oldXPos, float oldYPos, float newXPos, float newYPos,
 					{
 						moveOk = false;
 					}
-					if (ptr[pos]->getSprite().getPosition().y == 448 && ptr[pos]->getType() == 1&& moveOk == true)
+					if (ptr[pos]->getSprite().getPosition().y == 448 && ptr[pos]->getType() == 1&& moveOk == true && isTurnOk(ptr, moveCounter, pos) == true)
 					{
 						int pawnPosX = ptr[pos]->getSprite().getPosition().x;
 						int pawnPosY = ptr[pos]->getSprite().getPosition().y;
 
-						ptr[pos] = new Queen(BLACK);
+						ptr[pos] = ptr[18]->clone();
 						ptr[pos]->getSprite().setPosition(pawnPosX, pawnPosY);
+
 					}
-					if (ptr[pos]->getSprite().getPosition().y == 0 && ptr[pos]->getType() == -1 && moveOk == true)
+					if (ptr[pos]->getSprite().getPosition().y == 0 && ptr[pos]->getType() == -1 && moveOk == true && isTurnOk(ptr, moveCounter, pos) == true)
 					{
 						int pawnPosX = ptr[pos]->getSprite().getPosition().x;
 						int pawnPosY = ptr[pos]->getSprite().getPosition().y;
 
-						ptr[pos] = new Queen(WHITE);
+						ptr[pos] = ptr[19]->clone();
 						ptr[pos]->getSprite().setPosition(pawnPosX, pawnPosY);
+						
 					}
 					if (moveOk == true && isTurnOk(ptr, moveCounter, pos) == true)
 					{
 						ptr[i]->getSprite().setPosition(1000, 1000);
 					}
-					
+					if (isTurnOk(ptr, moveCounter, pos) == false)
+					{
+						moveOk = false;
+					}
 					
 				}
 			}
@@ -391,6 +417,7 @@ bool Rules::isMoveOk(float oldXPos, float oldYPos, float newXPos, float newYPos,
 
 	if (dynamic_cast<Queen*>(ptr[pos]))
 	{
+		std::wcout << "I'm now in queen rules" << std::endl;
 		if (dx <= -64 || dx >= 64)
 		{
 			if (dy >= 64 || dy <= -64)
@@ -544,6 +571,10 @@ bool Rules::isMoveOk(float oldXPos, float oldYPos, float newXPos, float newYPos,
 
 			}
 		}
+		if (isTurnOk(ptr, moveCounter, pos) == false)
+		{
+			moveOk = false;
+		}
 		for (int i = 0; i < 32; i++)
 		{
 			if (i != pos)
@@ -559,6 +590,7 @@ bool Rules::isMoveOk(float oldXPos, float oldYPos, float newXPos, float newYPos,
 					{
 						ptr[i]->getSprite().setPosition(1000, 1000);
 					}
+					
 
 
 				}

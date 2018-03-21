@@ -13,5 +13,6 @@ public:
 	void move();
 	void draw(sf::RenderWindow &window);
 	void setDefaultPosition(int x, int y);
+	virtual Rook* clone() const;
 };
 

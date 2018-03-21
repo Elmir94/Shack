@@ -47,3 +47,8 @@ void Knight::setDefaultPosition(int x, int y)
 	getSprite().setPosition(sf::Vector2f(x + (5 * x), y + (5 * y)));
 }
 
+Knight * Knight::clone() const
+{
+	return nullptr;
+}
+

@@ -32,6 +32,8 @@ public:
 	virtual void setType(int type);
 	virtual bool getIsMoved();
 	virtual void setMoved();
+	virtual Piece* clone() const = 0;
+	
 
 	
 

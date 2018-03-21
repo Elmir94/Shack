@@ -1,19 +1,12 @@
-﻿  Rules.cpp
-c:\users\reide\source\repos\schack\schack\rules.cpp(42): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\reide\source\repos\schack\schack\rules.cpp(53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\reide\source\repos\schack\schack\rules.cpp(75): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\reide\source\repos\schack\schack\rules.cpp(81): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\reide\source\repos\schack\schack\rules.cpp(87): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
-c:\users\reide\source\repos\schack\schack\rules.cpp(88): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
-c:\users\reide\source\repos\schack\schack\rules.cpp(91): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\reide\source\repos\schack\schack\rules.cpp(95): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
-c:\users\reide\source\repos\schack\schack\rules.cpp(96): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
-c:\users\reide\source\repos\schack\schack\rules.cpp(99): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\reide\source\repos\schack\schack\rules.cpp(178): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-c:\users\reide\source\repos\schack\schack\rules.cpp(287): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\users\reide\source\repos\schack\schack\rules.cpp(291): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\users\reide\source\repos\schack\schack\rules.cpp(450): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\users\reide\source\repos\schack\schack\rules.cpp(454): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\users\reide\source\repos\schack\schack\rules.cpp(458): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\users\reide\source\repos\schack\schack\rules.cpp(601): warning C4101: 'king': unreferenced local variable
+﻿  Bishop.cpp
+c:\users\reide\source\repos\schack\schack\bishop.cpp(47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  King.cpp
+c:\users\reide\source\repos\schack\schack\king.cpp(48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Knight.cpp
+c:\users\reide\source\repos\schack\schack\knight.cpp(47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Pawn.cpp
+c:\users\reide\source\repos\schack\schack\pawn.cpp(45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Rook.cpp
+c:\users\reide\source\repos\schack\schack\rook.cpp(47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Generating Code...
   Schack.vcxproj -> C:\Users\Reide\source\repos\Schack\Debug\Schack.exe

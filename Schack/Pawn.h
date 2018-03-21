@@ -20,6 +20,7 @@ public:
 	void move();
 	void draw(sf::RenderWindow &window);
 	void setDefaultPosition(int x, int y);
+	virtual Pawn* clone() const;
 	
 };
 
